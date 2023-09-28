@@ -33,3 +33,46 @@ class _InicioState extends State<Inicio> {
         ));
   }
 }
+
+class _LoginForm extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(15),
+      child: Form(
+        child: Column(
+          children: <Widget>[
+            Text("Iniciar Sesión"),
+            SizedBox(height: 25),
+            TextFormField(
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return "Obligatorio";
+                }
+                return null;
+              },
+              decoration: InputDecoration(
+                  labelText: "Correo Electrónico",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(1)))),
+            ),
+            SizedBox(height: 10),
+            TextFormField(
+              validator: (value) {
+                if (value!.isEmpty) {
+                  return "Obligatorio";
+                }
+                return null;
+              },
+              decoration: InputDecoration(
+                  labelText: "Contraseña",
+                  border: OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(1)))),
+            ),
+            SizedBox(height: 10),
+          ],
+        ),
+      ),
+    );
+  }
+}
