@@ -10,7 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Kind Coins",
-      home: Inicio(),
+      //home: Inicio(),
+      home: RegistroA(),
     );
   }
 }
@@ -49,15 +50,19 @@ class _RegistroAState extends State<RegistroA> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Registro"),
+          title: const Text("Registro"),
         ),
         body: Container(
             padding: const EdgeInsets.all(20),
             child: ListView(
               children: [
-                Text("Número de celular"),
+                const Text("Número de celular"),
+                const SizedBox(
+                  height: 5,
+                ),
                 TextField(
-                  decoration: InputDecoration(
+                  controller: phoneController,
+                  decoration: const InputDecoration(
                     border: OutlineInputBorder(),
                   ),
                 ),
