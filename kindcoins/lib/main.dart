@@ -34,45 +34,67 @@ class _InicioState extends State<Inicio> {
   }
 }
 
-class _LoginForm extends StatelessWidget {
+class ValidarForm extends StatefulWidget {
+  const ValidarForm({super.key});
+
+  @override
+  State<ValidarForm> createState() => _LoginForm();
+}
+
+class _LoginForm extends State<ValidarForm> {
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(15),
-      child: Form(
-        child: Column(
-          children: <Widget>[
-            Text("Iniciar Sesión"),
-            SizedBox(height: 25),
-            TextFormField(
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return "Obligatorio";
-                }
-                return null;
-              },
-              decoration: InputDecoration(
-                  labelText: "Correo Electrónico",
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(1)))),
-            ),
-            SizedBox(height: 10),
-            TextFormField(
-              validator: (value) {
-                if (value!.isEmpty) {
-                  return "Obligatorio";
-                }
-                return null;
-              },
-              decoration: InputDecoration(
-                  labelText: "Contraseña",
-                  border: OutlineInputBorder(
-                      borderRadius: BorderRadius.all(Radius.circular(1)))),
-            ),
-            SizedBox(height: 10),
-          ],
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("Iniciar Sesión"),
         ),
-      ),
-    );
+        body: Center(
+            child: Container(
+          padding: EdgeInsets.all(15),
+          child: Form(
+            child: Column(children: <Widget>[
+              SizedBox(height: 25),
+              TextFormField(
+                controller: emailController,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Obligatorio";
+                  }
+                  return null;
+                },
+                decoration: InputDecoration(
+                    labelText: "Correo Electrónico",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(1))),
+                    hintText: 'Ingresa tu correo electrónico'),
+              ),
+              SizedBox(height: 10),
+              TextFormField(
+                controller: passwordController,
+                validator: (value) {
+                  if (value!.isEmpty) {
+                    return "Obligatorio";
+                  }
+                  return null;
+                },
+                decoration: InputDecoration(
+                    labelText: "Contraseña",
+                    border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(Radius.circular(1))),
+                    hintText: 'Ingresa tu contraseña'),
+              ),
+              SizedBox(height: 10),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ValidarForm()));
+                  },
+                  child: const Text('Inicia Sesión')),
+            ]),
+          ),
+        )));
   }
 }
