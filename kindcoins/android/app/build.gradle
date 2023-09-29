@@ -24,7 +24,7 @@ if (flutterVersionName == null) {
 
 android {
     namespace "com.example.kindcoins"
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion flutterVersionName
     ndkVersion flutter.ndkVersion
 
     compileOptions {
