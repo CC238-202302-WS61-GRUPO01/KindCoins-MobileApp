@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Kind Coins",
-      home: Inicio(),
+      home: ValidarForm(),
     );
   }
 }
@@ -89,8 +89,10 @@ class _LoginForm extends State<ValidarForm> {
               SizedBox(height: 10),
               ElevatedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ValidarForm()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => ValidarForm()),
+                    );
                   },
                   child: const Text('Inicia Sesión')),
             ]),
