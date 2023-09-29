@@ -91,10 +91,28 @@ class _LoginForm extends State<ValidarForm> {
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => ValidarForm()),
+                      MaterialPageRoute(builder: (context) => RegistroA()),
                     );
                   },
                   child: const Text('Inicia Sesión')),
+              SizedBox(height: 10),
+              InkWell(
+                onTap: () {
+                  // Acción al presionar "Ingresa aquí"
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => RegistroA()),
+                  );
+                },
+                child: Text(
+                  'Registrate aquí',
+                  style: TextStyle(
+                    color:
+                        Colors.blue, // Puedes cambiar el color según tu diseño
+                    decoration: TextDecoration.underline,
+                  ),
+                ),
+              ),
             ]),
           ),
         )));
