@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kindcoins/screens/inicio_screen.dart';
+import 'package:kindcoins/screens/home_screen.dart';
 
 class RegistroBScreen extends StatefulWidget {
   @override
@@ -143,7 +143,7 @@ class _RegistroBState extends State<RegistroBScreen> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => InicioScreen()));
+                                  builder: (context) => HomeScreen()));
                         },
                         child: const Text('Enviar Código')),
                   ],

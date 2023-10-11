@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'widgets/validar_form.dart';
-import 'screens/inicio_screen.dart';
 
 void main() => runApp(MyApp());
 
