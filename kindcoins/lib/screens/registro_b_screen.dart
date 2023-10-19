@@ -12,7 +12,7 @@ class _RegistroBState extends State<RegistroBScreen> {
   TextEditingController emailController = TextEditingController();
   TextEditingController birthdayController = TextEditingController();
   TextEditingController addressController = TextEditingController();
-  String genderValue = 'Indefinido';
+  String genderValue = 'No determinado';
 
   DateTime selectedDate = DateTime.now();
 
@@ -21,7 +21,26 @@ class _RegistroBState extends State<RegistroBScreen> {
         context: context,
         initialDate: DateTime.now(),
         firstDate: DateTime(1900),
-        lastDate: DateTime(2015));
+        lastDate: DateTime(2015)
+    );
+  }
+  bool _checkControllers(){
+    if(nameController.text.isEmpty ||
+        phoneController.text.isEmpty ||
+        emailController.text.isEmpty ||
+        birthdayController.text.isEmpty ||
+        addressController.text.isEmpty ||
+        genderValue.isEmpty
+    ){
+      return false;
+    }
+    if(phoneController.text.length!=15 ||
+        !emailController.text.contains("@") ||
+        !emailController.text.contains(".com")
+    ){
+      return false;
+    }
+    return true;
   }
 
   @override
@@ -104,19 +123,22 @@ class _RegistroBState extends State<RegistroBScreen> {
                       height: 10,
                     ),
                     DropdownButton<String>(
-                      items: const [
-                        DropdownMenuItem(
-                            value: 'No binario', child: Text('no binario')),
-                        DropdownMenuItem(
-                            value: 'Masculino', child: Text('Masculino')),
-                        DropdownMenuItem(
-                            value: 'Femenino', child: Text('Femenino'))
-                      ],
+                      value: genderValue,
                       onChanged: (String? newValue) {
                         setState(() {
                           genderValue = newValue!;
                         });
                       },
+                      items: const [
+                        DropdownMenuItem(
+                            value: 'No binario', child: Text('No binario')),
+                        DropdownMenuItem(
+                            value: 'Masculino', child: Text('Masculino')),
+                        DropdownMenuItem(
+                            value: 'Femenino', child: Text('Femenino')),
+                        DropdownMenuItem(
+                            value: 'No determinado', child: Text('No determinado'))
+                      ],
                     ),
                     //Espacio extra
                     const SizedBox(
@@ -139,13 +161,16 @@ class _RegistroBState extends State<RegistroBScreen> {
                     ),
                     //Espacio extra
                     ElevatedButton(
-                        onPressed: () {
+                      onPressed: () {
+                        if (_checkControllers()) {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => HomeScreen()));
-                        },
-                        child: const Text('Enviar Código')),
+                        }
+                      },
+                      child: const Text('Enviar Código'),
+                    ),
                   ],
                 ))));
   }
