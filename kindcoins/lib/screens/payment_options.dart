@@ -20,7 +20,9 @@ class _PaymentOptionsState extends State<PaymentOptions> {
           Text("Selecciona tu método de pago"),
           Text("Revisa el detalle del monto antes de pagar"),
           ListTile(
-            title: const Text('Visa'),
+            title: Image(
+              image: AssetImage("lib/assets/Visa.png"),
+            ),
             leading: Radio(
               value: options[0],
               groupValue: currentOpt,
@@ -32,7 +34,9 @@ class _PaymentOptionsState extends State<PaymentOptions> {
             ),
           ),
           ListTile(
-            title: const Text('Yape'),
+            title: Image(
+              image: AssetImage("lib/assets/Yape.png"),
+            ),
             leading: Radio(
               value: options[1],
               groupValue: currentOpt,
@@ -44,7 +48,9 @@ class _PaymentOptionsState extends State<PaymentOptions> {
             ),
           ),
           ListTile(
-            title: const Text('Plin'),
+            title: Image(
+              image: AssetImage("lib/assets/Plin.png"),
+            ),
             leading: Radio(
               value: options[2],
               groupValue: currentOpt,
