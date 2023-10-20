@@ -22,6 +22,8 @@ class _PaymentOptionsState extends State<PaymentOptions> {
           ListTile(
             title: Image(
               image: AssetImage("lib/assets/Visa.png"),
+              height: 15.0,
+              width: 20.0,
             ),
             leading: Radio(
               value: options[0],
@@ -36,6 +38,8 @@ class _PaymentOptionsState extends State<PaymentOptions> {
           ListTile(
             title: Image(
               image: AssetImage("lib/assets/Yape.png"),
+              height: 15.0,
+              width: 15.0,
             ),
             leading: Radio(
               value: options[1],
@@ -50,6 +54,8 @@ class _PaymentOptionsState extends State<PaymentOptions> {
           ListTile(
             title: Image(
               image: AssetImage("lib/assets/Plin.png"),
+              height: 15.0,
+              width: 15.0,
             ),
             leading: Radio(
               value: options[2],
@@ -60,6 +66,12 @@ class _PaymentOptionsState extends State<PaymentOptions> {
                 });
               },
             ),
+          ),
+          MaterialButton(
+            child: Text("Continuar"),
+              onPressed: (){
+
+              }
           )
         ],
       ),

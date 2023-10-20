@@ -8,11 +8,14 @@ class CardForm extends StatefulWidget {
 class _CardFormState extends State<CardForm> {
   @override
   Widget build(BuildContext context) {
+    final theme=Theme.of(context);
+    final st1=theme.textTheme.displayMedium;
+    final st2=theme.textTheme.displaySmall;
     return Scaffold(
       body: Column(
         children: <Widget>[
-          Text("Pago"),
-          Text("Recuerda activar compras por Internet con tu banco"),
+          Text("Pago", style: st1),
+          Text("Recuerda activar compras por Internet con tu banco", style: st2),
           Column(
             children: <Widget>[
               Form(child: Container(
@@ -111,6 +114,12 @@ class _CardFormState extends State<CardForm> {
                     ],
                   ),
                 ),
+              ),
+              MaterialButton(
+                child: Text("Pagar mi suscripción"),
+                  onPressed: (){
+
+                  }
               )
             ],
           )
