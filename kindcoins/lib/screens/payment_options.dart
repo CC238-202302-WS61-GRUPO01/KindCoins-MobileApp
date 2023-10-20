@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kindcoins/screens/card_form.dart';
 
 
 
@@ -70,7 +71,12 @@ class _PaymentOptionsState extends State<PaymentOptions> {
           MaterialButton(
             child: Text("Continuar"),
               onPressed: (){
-
+              showAboutDialog(
+                  context: context,
+                children:[
+                  CardForm()
+                ]
+              );
               }
           )
         ],

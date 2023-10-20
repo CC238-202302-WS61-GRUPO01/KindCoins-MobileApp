@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kindcoins/screens/confirmation.dart';
 
 class CardForm extends StatefulWidget {
   @override
@@ -118,7 +119,12 @@ class _CardFormState extends State<CardForm> {
               MaterialButton(
                 child: Text("Pagar mi suscripción"),
                   onPressed: (){
-
+                    showAboutDialog(
+                        context: context,
+                        children:[
+                          Confirmation()
+                        ]
+                    );
                   }
               )
             ],
