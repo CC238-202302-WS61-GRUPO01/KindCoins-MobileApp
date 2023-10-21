@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kindcoins/widgets/home/side_nav_bar.dart';
 
 class Header extends StatelessWidget implements PreferredSizeWidget {
   @override

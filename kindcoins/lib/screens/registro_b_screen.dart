@@ -32,15 +32,15 @@ class _RegistroBState extends State<RegistroBScreen> {
         addressController.text.isEmpty ||
         genderValue.isEmpty
     ){
-      return false;
+      return true;
     }
     if(phoneController.text.length!=15 ||
         !emailController.text.contains("@") ||
         !emailController.text.contains(".com")
     ){
-      return false;
+      return true;
     }
-    return true;
+    return false;
   }
 
   @override

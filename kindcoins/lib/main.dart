@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kindcoins/screens/home_screen.dart';
 import 'widgets/validar_form.dart';
 
 void main() => runApp(MyApp());
@@ -10,7 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Kind Coins",
-      home: ValidarFormWidget(),
+      //home: ValidarFormWidget(),
+      home: HomeScreen(),
     );
   }
 }
