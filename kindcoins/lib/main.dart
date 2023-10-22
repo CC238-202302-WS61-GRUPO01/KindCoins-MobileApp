@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Kind Coins",
-      //home: ValidarFormWidget(),
-      home: HomeScreen(),
+      home: ValidarFormWidget(),
+      //home: HomeScreen(),
     );
   }
 }

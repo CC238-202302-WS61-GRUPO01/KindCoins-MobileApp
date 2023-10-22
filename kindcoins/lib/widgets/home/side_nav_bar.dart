@@ -5,41 +5,40 @@ class SideNavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Drawer(//Quitar el const más tarde
-      backgroundColor: Color.fromARGB(1, 235, 255, 253),//Color Secundario
-      child: Stack(
-        children: <Widget>[
+    return Drawer(//Quitar el const más tarde
+      backgroundColor: Color.fromARGB(255, 235, 255, 253),//Color Secundario
+      child: ListView(
+        children: const <Widget>[
           DrawerHeader(
               decoration: BoxDecoration(
-                color: Color.fromARGB(1, 5, 151, 166)//Color Primario
+                color: Color.fromARGB(255, 5, 151, 166)//Color Primario
               ),
-              padding: EdgeInsets.all(16.0),
-              child: Stack(
+              padding: EdgeInsets.all(8.0),
+              child: Row(
                 children: <Widget>[
                   Image(
                     alignment: Alignment.centerLeft,
-                    image: AssetImage("lib/descarga.jpg"),
+                    image: AssetImage("lib/images.png"),
                     width: 80.0,
+                    fit: BoxFit.fitHeight,
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(right:8.0),
                   ),
                   Text(
                     "Nombre de usuario",
                     textAlign: TextAlign.right,
-                    overflow: TextOverflow.clip,
                     style: TextStyle(
                         fontFamily: "Roboto",
                         fontWeight: FontWeight.bold,
-                        fontSize: 40,
+                        fontSize: 20,
                         color: Colors.black//Negro 1
                     ),
                   ),
                 ],
               )
           ),
-          Padding(
-            padding: EdgeInsets.only(top:40.0),
-          ),
-          Column(
-            children: <Widget>[
+          Padding(padding: EdgeInsets.only(top:16.0),),
               ListTile(
                 title: Text(
                   "Perfil",
@@ -56,7 +55,7 @@ class SideNavBar extends StatelessWidget {
                 //onTap: (){},
               ),
               Padding(
-                padding: EdgeInsets.only(top:24.0),
+                padding: EdgeInsets.only(top:16.0),
               ),
               ListTile(
                 title: Text(
@@ -74,7 +73,7 @@ class SideNavBar extends StatelessWidget {
                 //onTap: (){},
               ),
               Padding(
-                padding: EdgeInsets.only(top:24.0),
+                padding: EdgeInsets.only(top:16.0),
               ),
               ListTile(
                 title: Text(
@@ -110,8 +109,6 @@ class SideNavBar extends StatelessWidget {
                 //onTap: (){},
               )
             ],
-          ),
-        ],
       ),
     );
   }

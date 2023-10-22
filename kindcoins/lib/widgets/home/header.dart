@@ -6,7 +6,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     return AppBar(
       title: Text('KindCoins'),
-      leading: Icon(Icons.home),
+      //leading: Icon(Icons.home),
       actions: [
         IconButton(
           icon: Icon(Icons.search),
