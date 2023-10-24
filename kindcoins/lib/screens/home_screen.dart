@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:kindcoins/widgets/home/side_nav_bar.dart';
 import '../widgets/home/trend_carrousel.dart';
 import '../widgets/home/header.dart';
 import '../widgets/home/explore_carroursel.dart';
@@ -53,6 +54,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: SideNavBar(),
       appBar: Header(),
       body: Column(
         children: [

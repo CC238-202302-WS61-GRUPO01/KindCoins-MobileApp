@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:kindcoins/widgets/home/side_nav_bar.dart';
 
 class Header extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
       title: Text('KindCoins'),
-      leading: Icon(Icons.home),
+      //leading: Icon(Icons.home),
       actions: [
         IconButton(
           icon: Icon(Icons.search),
