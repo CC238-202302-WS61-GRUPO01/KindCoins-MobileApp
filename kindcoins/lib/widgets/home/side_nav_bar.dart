@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class SideNavBar extends StatelessWidget {
   const SideNavBar({super.key});
@@ -8,7 +9,7 @@ class SideNavBar extends StatelessWidget {
     return Drawer(//Quitar el const más tarde
       backgroundColor: Color.fromARGB(255, 235, 255, 253),//Color Secundario
       child: ListView(
-        children: const <Widget>[
+        children: <Widget>[
           DrawerHeader(
               decoration: BoxDecoration(
                 color: Color.fromARGB(255, 5, 151, 166)//Color Primario
@@ -28,11 +29,12 @@ class SideNavBar extends StatelessWidget {
                   Text(
                     "Nombre de usuario",
                     textAlign: TextAlign.right,
-                    style: TextStyle(
-                        fontFamily: "Roboto",
-                        fontWeight: FontWeight.bold,
-                        fontSize: 20,
-                        color: Colors.black//Negro 1
+                    style: GoogleFonts.roboto(
+                        textStyle:TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 20,
+                            color: Colors.black//Negro 1
+                        )
                     ),
                   ),
                 ],
@@ -45,11 +47,12 @@ class SideNavBar extends StatelessWidget {
                   textAlign: TextAlign.left,
                   overflow: TextOverflow.visible,
                   selectionColor: Colors.white,
-                  style: TextStyle(
-                      fontFamily: "Roboto",
-                      fontWeight: FontWeight.normal,
-                      fontSize: 20,
-                      color: Colors.black//Negro 1
+                  style: GoogleFonts.roboto(
+                      textStyle:TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 20,
+                          color: Colors.black//Negro 1
+                      )
                   ),
                 ),
                 //onTap: (){},
@@ -63,11 +66,12 @@ class SideNavBar extends StatelessWidget {
                   textAlign: TextAlign.left,
                   overflow: TextOverflow.visible,
                   selectionColor: Colors.white,
-                  style: TextStyle(
-                      fontFamily: "Roboto",
-                      fontWeight: FontWeight.normal,
-                      fontSize: 20,
-                      color: Colors.black//Negro 1
+                  style: GoogleFonts.roboto(
+                      textStyle:TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 20,
+                          color: Colors.black//Negro 1
+                      )
                   ),
                 ),
                 //onTap: (){},
@@ -81,11 +85,12 @@ class SideNavBar extends StatelessWidget {
                   textAlign: TextAlign.left,
                   overflow: TextOverflow.visible,
                   selectionColor: Colors.white,
-                  style: TextStyle(
-                      fontFamily: "Roboto",
-                      fontWeight: FontWeight.normal,
-                      fontSize: 20,
-                      color: Colors.black//Negro 1
+                  style: GoogleFonts.roboto(
+                      textStyle:TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 20,
+                          color: Colors.black//Negro 1
+                      )
                   ),
                 ),
                 //onTap: (){},
@@ -99,11 +104,12 @@ class SideNavBar extends StatelessWidget {
                   textAlign: TextAlign.left,
                   overflow: TextOverflow.visible,
                   selectionColor: Colors.white,
-                  style: TextStyle(
-                      fontFamily: "Roboto",
-                      fontWeight: FontWeight.normal,
-                      fontSize: 20,
-                      color: Colors.black//Negro 1
+                  style: GoogleFonts.roboto(
+                      textStyle:TextStyle(
+                          fontWeight: FontWeight.normal,
+                          fontSize: 20,
+                          color: Colors.black//Negro 1
+                      )
                   ),
                 ),
                 //onTap: (){},
