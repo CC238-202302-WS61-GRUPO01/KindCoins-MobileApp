@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:kindcoins/screens/CampaignCreationPage2.dart';
+import 'widgets/validar_form.dart';
+import 'screens/CampaignCreationPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -9,27 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "Kind Coins",
-      home: Inicio(),
+      home: CampaignCreationPage(),
     );
-  }
-}
-
-class Inicio extends StatefulWidget {
-  Inicio({Key? key}) : super(key: key);
-
-  @override
-  _InicioState createState() => _InicioState();
-}
-
-class _InicioState extends State<Inicio> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("KindCoins"),
-        ),
-        body: Center(
-          child: Text("Contenido"),
-        ));
   }
 }
